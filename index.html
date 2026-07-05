@@ -742,10 +742,24 @@ footer{
 @media(max-width:900px){
   nav{padding:20px 24px}
   .nav-right a:not(.nav-available){display:none}
-  #hero{padding:0 24px 80px}
+  #hero{
+    padding:120px 24px 48px;
+    justify-content:flex-end;
+    min-height:auto;
+  }
   .hero-top-meta,.hero-top-right{display:none}
   .hero-sub-row{flex-direction:column;gap:16px;align-items:flex-start}
-  .hero-desc{text-align:left}
+  .hero-desc{text-align:left;max-width:100%}
+  /* Scroll indicator: flow below content, not absolute-positioned */
+  .hero-scroll{
+    position:relative;
+    bottom:auto;left:auto;
+    transform:none;
+    margin-top:36px;
+    align-self:flex-start;
+    opacity:1;
+    animation:none;
+  }
   .section{padding:80px 24px}
   .about-grid,.skills-cols{grid-template-columns:1fr;gap:40px}
   .work-header{flex-direction:column;gap:12px;align-items:flex-start}
